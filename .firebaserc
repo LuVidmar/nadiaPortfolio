@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "lvwebportfolio": {
+      "hosting": {
+        "nadiaPortfolio": [
+          "lvwebportfolio"
+        ]
+      }
+    }
+  }
+}
