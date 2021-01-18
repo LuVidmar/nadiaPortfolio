@@ -18,7 +18,7 @@ export class IndexComponent implements OnInit {
     {
       title: '🏅 Sports',
       about: 'Lorem 2 ipsum dolor sit amet consectetur adipisicing elit. Ratione deleniti consequuntur alias. Sit vitae perspiciatis officiis, dolorem tempore impedit explicabo nihil consequuntur minus necessitatibus voluptatibus asperiores! Ea blanditiis et veniam!',
-      link: '/sport'
+      link: '/sports'
     },
     {
       title: '🙋‍♀️ Volunteering',

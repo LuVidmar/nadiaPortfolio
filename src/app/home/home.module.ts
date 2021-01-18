@@ -5,6 +5,7 @@ import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { MaterialModule } from '../material/material.module';
 import { IndexComponent } from './index/index.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,7 +13,8 @@ import { IndexComponent } from './index/index.component';
   declarations: [HomeComponent, MainComponent, AboutComponent, IndexComponent],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule
   ]
 })
 export class HomeModule { }
