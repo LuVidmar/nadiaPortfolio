@@ -1,1 +1,11 @@
-<p>index works!</p>
+<div id="container">
+    <h1>🗂️ Index</h1>
+    <hr>
+    <div class="category" *ngFor="let category of categories">
+        <h2>{{category.title}}</h2>
+        <p>{{category.about}}</p>
+        <button type="button" mdbBtn color="light" mdbWavesEffect><a [routerLink]="['{{category.link}}']">Read More</a></button>
+    </div>
+    
+    
+</div>
