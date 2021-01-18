@@ -2,10 +2,13 @@
   "targets": {
     "lvwebportfolio": {
       "hosting": {
-        "nadiaPortfolio": [
-          "lvwebportfolio"
+        "nadia": [
+          "nadiavidmar"
         ]
       }
     }
+  },
+  "projects": {
+    "nadia": "lvwebportfolio"
   }
 }

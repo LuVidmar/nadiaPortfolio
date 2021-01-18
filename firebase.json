@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "target": "nadiaPortfolio",
+      "target": "nadia",
       "public": "dist/nadiaPortfolio",
       "ignore": [
         "**/.*"
