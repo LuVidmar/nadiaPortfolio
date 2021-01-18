@@ -1,0 +1,44 @@
+body {
+    height: 100vh;
+    background-color: var(--dark-grey);
+}
+  
+.mainbox {
+    background-color: transparent;
+    margin: auto;
+    padding: 4vmin;
+}
+  
+.err {
+    color: whitesmoke;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 25vmin;
+    display: inline-block;
+}
+
+.far {
+    font-size: 20vmin;
+    color: whitesmoke;
+}
+
+.msg {
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.6rem;
+    color: rgba(silver, 0.5);
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#e404{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
