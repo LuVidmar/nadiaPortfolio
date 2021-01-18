@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angularTemplate'`, () => {
+  it(`should have as title 'nadiaPortfolio'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angularTemplate');
+    expect(app.title).toEqual('nadiaPortfolio');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angularTemplate app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('nadiaPortfolio app is running!');
   });
 });
