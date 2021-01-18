@@ -4,8 +4,7 @@
     <div class="category" *ngFor="let category of categories">
         <h2>{{category.title}}</h2>
         <p>{{category.about}}</p>
-        <a [routerLink]="[category.link]">caca</a>
-        <button type="button" mdbBtn color="light" mdbWavesEffect>Read More</button>
+        <a [routerLink]="[category.link]"><button type="button" mdbBtn color="light" mdbWavesEffect>Read More</button></a>
     </div>
     
     

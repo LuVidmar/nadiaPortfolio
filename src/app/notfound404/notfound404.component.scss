@@ -1,6 +1,6 @@
 body {
     height: 100vh;
-    background-color: var(--dark-grey);
+    background-color: var(--white);
 }
   
 .mainbox {
@@ -10,7 +10,7 @@ body {
 }
   
 .err {
-    color: whitesmoke;
+    color: var(--golden);
     font-family: 'Nunito Sans', sans-serif;
     font-size: 25vmin;
     display: inline-block;
@@ -18,19 +18,19 @@ body {
 
 .far {
     font-size: 20vmin;
-    color: whitesmoke;
+    color: var(--golden);
 }
 
 .msg {
     text-align: center;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 1.6rem;
-    color: rgba(silver, 0.5);
+    color: var(--dark-brown);
 }
 
 a {
     text-decoration: none;
-    color: whitesmoke;
+    color: var(--golden);
 }
 
 a:hover {
