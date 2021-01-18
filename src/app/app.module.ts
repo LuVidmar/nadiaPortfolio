@@ -10,18 +10,22 @@ import { AppComponent } from './app.component';
 import { Notfound404Component } from './notfound404/notfound404.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    Notfound404Component
+    Notfound404Component,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
