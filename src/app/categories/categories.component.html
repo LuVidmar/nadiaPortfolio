@@ -2,37 +2,39 @@
     <h1><a [routerLink]="['/home']">🔙</a></h1>
     <hr>
     <h1>{{title}}</h1>
+    <br>
 
     <div *ngFor='let year of yearData'>
         <h3>{{year.ynum}}</h3>
-        <div class="card-deck">
-
-            <!-- Card -->
-            <mdb-card *ngFor='let activity of year.activities | async'>
-                <div class="view overlay waves-light" mdbWavesEffect>
-                    <!-- Card img -->
-                    <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap">
-                    </mdb-card-img>
-                    <a>
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-                <!--Card content-->
-                <mdb-card-body>
-                    <!--Title-->
-                    <mdb-card-title>
-                        <h4>{{activity.title}}</h4>
-                    </mdb-card-title>
-
-                    <!--Text-->
-                    <mdb-card-text>{{activity.desc}}</mdb-card-text>
-
-                    <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-                </mdb-card-body>
-            </mdb-card>
-
+        <!-- Card -->
+        <div class="cardContainer">
+            <div class="cardSpace" *ngFor='let activity of year.activities | async'>
+                <mdb-card class="card">
+                    <div class="view overlay waves-light" mdbWavesEffect>
+                        <!-- Card img -->
+                        <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap">
+                        </mdb-card-img>
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--Card content-->
+                    <mdb-card-body>
+                        <!--Title-->
+                        <mdb-card-title>
+                            <h4>{{activity.title}}</h4>
+                        </mdb-card-title>
+        
+                        <!--Text-->
+                        <mdb-card-text>{{activity.desc}}</mdb-card-text>
+        
+                        <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
+                    </mdb-card-body>
+                </mdb-card>
+            </div>
+            
         </div>
-
+        <br>
     </div>
 
 </div>

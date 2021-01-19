@@ -6,6 +6,24 @@ h1 a:hover{
     opacity: 0.8;
 }
 
+h3{
+    padding-left: 2vmin;
+}
+
 #container{
     padding: 4vmin;
+}
+
+.cardContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cardSpace{
+    max-width: 190pt;
+    display: flex;
+    flex-direction: column;
+    padding: 2vmin;
 }
