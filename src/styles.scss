@@ -5,4 +5,29 @@
     --salmon: #DED1BD;
     --white: #FAF6F2;
     --golden: #B08401;
+    --pastel-yellow: #FFF4BD;
+
+    .highlightEffectYellow{
+        background-image: linear-gradient(var(--pastel-yellow), var(--pastel-yellow));
+        background-repeat: no-repeat;
+        background-position: 0% 0%;
+        background-size: 0% 100%;
+        transition: ease-in-out 0.5s all;
+    }
+
+    .highlightEffectYellow:hover{
+        background-size: 100% 100%;
+    }
+
+    .highlightEffectPink{
+        background-image: linear-gradient(var(--salmon), var(--salmon));
+        background-repeat: no-repeat;
+        background-position: 0% 0%;
+        background-size: 0% 100%;
+        transition: ease-in-out 0.5s all;
+    }
+
+    .highlightEffectPink:hover{
+        background-size: 100% 100%;
+    }
 }
