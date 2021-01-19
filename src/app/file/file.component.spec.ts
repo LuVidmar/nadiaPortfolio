@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SportsComponent } from './sports.component';
+import { FileComponent } from './file.component';
 
-describe('SportsComponent', () => {
-  let component: SportsComponent;
-  let fixture: ComponentFixture<SportsComponent>;
+describe('FileComponent', () => {
+  let component: FileComponent;
+  let fixture: ComponentFixture<FileComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SportsComponent ]
+      declarations: [ FileComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SportsComponent);
+    fixture = TestBed.createComponent(FileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
