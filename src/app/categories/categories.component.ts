@@ -11,6 +11,8 @@ import { activity, year } from './../data-types';
 })
 export class CategoriesComponent implements OnInit {
 
+  placeHolderData = [1,2,3,4];
+  loading = true;
   title = 'Placeholder'
   yearData: year[];
   years: number[];
@@ -18,23 +20,23 @@ export class CategoriesComponent implements OnInit {
   public constructor(private route:ActivatedRoute, private router: Router, firestore: AngularFirestore) {
     var code = route.snapshot.data['category'];
     this.updateTitle(code);
-    console.log(code);
     
     var yearList = firestore.collection('nadia').doc(code).valueChanges();
     yearList.subscribe(data => {
       this.yearData = [];
       this.years = data['years'];
-      console.log(this.years);
+
       this.years.forEach(y => {
         var actData = firestore.collection('nadia').doc(code).collection(y.toString()).valueChanges();   
         
         var newYear = new year(y,actData);
-        console.log(newYear);
         
-        this.yearData.push(newYear);
+        this.yearData.push(newYear);        
       });
+
+      this.loading = false;
       
-    });
+    });    
     
   }
 
