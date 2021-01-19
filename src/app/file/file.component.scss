@@ -20,7 +20,16 @@
     overflow: hidden;
 }
 
-.shortDesc{
+#category{
+    background-color: silver;
+    width: fit-content;
+    border-radius: 10pt;
+    padding-left: 5pt;
+    padding-right: 5pt;
+    margin: 6vmin;
+}
+
+#shortDesc{
     margin: 6vmin;
     border-left: 3px solid black;
     padding-left: 2vmin;
