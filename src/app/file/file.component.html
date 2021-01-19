@@ -1,1 +1,19 @@
-<p>file works!</p>
+<div *ngIf="loaded">
+    <div class="hdr">
+        <img src="{{(doc | async)?.imgLink}}" alt="Header Image">
+        <h1>{{(doc | async)?.title}}</h1>
+    </div>
+    <p class="shortDesc">
+        {{(doc | async)?.shortDesc}}
+    </p>
+</div>
+
+<div *ngIf="!loaded">
+    <div class="hdr">
+        <img src="./../../assets/grayloading.jpg" alt="Loading Image">
+        <h1 class="loading">Loading...</h1>
+    </div>
+    <p class="shortDesc loading">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error eum recusandae doloribus ipsa possimus aut neque architecto quos 
+    </p>
+</div>
