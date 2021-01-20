@@ -1,3 +1,13 @@
 ::ng-deep .navbar{
-    background-color: var(--white) !important;
+    background-color: var(--salmon) !important;
+}
+
+mdb-navbar-brand a{
+    font-family: 'Neucha', sans-serif;
+    font-size: 25pt;
+    color: #212529;
+}
+
+mdb-navbar-brand a:hover{
+    opacity: 0.5;
 }
