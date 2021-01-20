@@ -104,13 +104,13 @@
 }
 
 h1{
-    padding: 2vmin;
     font-family: 'Neucha', sans-serif;
-    font-size: 10vmax;
+    font-size: 9vmax;
     line-height: 9vmax;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 h3{
@@ -123,45 +123,42 @@ h3{
     background: var(--pastel-yellow);
     -webkit-mask: url(./../../../assets/mainpage/highlight1.svg) no-repeat 50% 50%;
     mask: url(./../../../assets/mainpage/highlight1.svg) no-repeat 50% 50%;
-    -webkit-mask-size: 22.5vmax 20vmax;
-    mask-size: 30vmax 20vmax;
+    -webkit-mask-size: 27vmax 17vmax;
+    mask-size: 30vmax 20vmax; 
     color: var(--pastel-yellow);
     opacity: 0.2;
     transition: all ease-in 200ms;
+    text-align: center;
 }
 
 .highlight1:hover{
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .highlight2 {
     background: var(--pastel-yellow);
     -webkit-mask: url(./../../../assets/mainpage/highlight2.svg) no-repeat 50% 50%;
     mask: url(./../../../assets/mainpage/highlight2.svg) no-repeat 50% 50%;
-    -webkit-mask-size: 25vmax 20vmax;
-    mask-size: 30vmax 20vmax;
+    -webkit-mask-size: 27vmax 17vmax;
+    mask-size: 30vmax 20vmax; 
     color: var(--pastel-yellow);
     opacity: 0.2;
     transition: all ease-in 200ms;
+    text-align: center;
 }
 
 .highlight2:hover{
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .overlap{
+    width: 100%;
     position: absolute;
-}
-
-.highlightContainer{
-    display: inline-block;
-    padding: 2vmin;
+    top: 0;
+    left: 0;
+    color: #212529;
 }
 
 .op{
     opacity: 0.6;
-}
-
-.container{
-    padding-bottom: 6vmin;
 }
