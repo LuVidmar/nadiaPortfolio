@@ -1,6 +1,6 @@
 <div *ngIf="loaded">
     <div class="hdr">
-        <img src="{{(doc | async)?.imgLink}}" alt="Header Image">
+        <img src="{{(doc | async)?.imgLink[0]}}" alt="Header Image">
         <h1>{{(doc | async)?.title}}</h1>
     </div>
     <div id="category" [style.background-color]="catColor">
@@ -9,17 +9,24 @@
     <p id="shortDesc">
         {{(doc | async)?.shortDesc}}
     </p>
-</div>
-
-<div *ngIf="!loaded">
-    <div class="hdr">
-        <img src="./../../assets/grayloading.jpg" alt="Loading Image">
-        <h1 class="loading">Loading...</h1>
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md d-flex justify-content-center"
+                *ngFor="let ilink of ((doc | async)?.imgLink); let i as index">
+                <img class="gal" src="{{ilink}}" [alt]="'Image '+i">
+            </div>
+        </div>
     </div>
-    <div id="category">
-        Category
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Description</h3>
+                <p>{{(doc | async)?.desc}}</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Translation</h3>
+                <p>{{(doc | async)?.trans}}</p>    
+            </div>
+        </div>
     </div>
-    <p class="shortDesc loading">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error eum recusandae doloribus ipsa possimus aut neque architecto quos 
-    </p>
 </div>

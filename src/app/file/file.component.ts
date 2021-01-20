@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, DocumentData } from '@angular/fire/firestore';
+import { AngularFireStorage } from '@angular/fire/storage';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { activity } from '../data-types';
@@ -17,7 +18,7 @@ export class FileComponent implements OnInit {
   docId: string;
   doc: Observable<activity>;
 
-  constructor(private route: ActivatedRoute, private router: Router, firestore: AngularFirestore) {
+  constructor(private route: ActivatedRoute, private router: Router, firestore: AngularFirestore, private storage: AngularFireStorage) {
     this.route.params.subscribe( params => {
       this.setCat(params.cat);
       
