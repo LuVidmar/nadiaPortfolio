@@ -1,5 +1,5 @@
 .polaroid {
-    background: #fff;
+    background: var(--white);
     padding: 1rem;
     box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
 }
@@ -160,4 +160,8 @@ h3{
 
 .op{
     opacity: 0.6;
+}
+
+.container{
+    padding-bottom: 6vmin;
 }
