@@ -45,7 +45,7 @@ export class CategoriesComponent implements OnInit {
   ngOnInit() {
   }
 
-  updateTitle(s){    
+  updateTitle(s){
     switch(s){
       case 'academic':
         this.title = "🎓 Academic";
