@@ -120,12 +120,12 @@ h3{
 }
 
 .highlight1 {
-    background: var(--pastel-yellow);
+    background: var(--golden);
     -webkit-mask: url(./../../../assets/mainpage/highlight1.svg) no-repeat 50% 50%;
     mask: url(./../../../assets/mainpage/highlight1.svg) no-repeat 50% 50%;
     -webkit-mask-size: 27vmax 17vmax;
     mask-size: 30vmax 20vmax; 
-    color: var(--pastel-yellow);
+    color: var(--golden);
     opacity: 0.2;
     transition: all ease-in 200ms;
     text-align: center;
@@ -136,12 +136,12 @@ h3{
 }
 
 .highlight2 {
-    background: var(--pastel-yellow);
+    background: var(--golden);
     -webkit-mask: url(./../../../assets/mainpage/highlight2.svg) no-repeat 50% 50%;
     mask: url(./../../../assets/mainpage/highlight2.svg) no-repeat 50% 50%;
     -webkit-mask-size: 27vmax 17vmax;
     mask-size: 30vmax 20vmax; 
-    color: var(--pastel-yellow);
+    color: var(--golden);
     opacity: 0.2;
     transition: all ease-in 200ms;
     text-align: center;
