@@ -1,0 +1,46 @@
+<div style="padding: 4vmin; background-color: var(--salmon);">
+
+    <h4>Already exists? {{exists}}</h4>
+    
+    <form [formGroup]="frm" (ngSubmit)="onSubmit(frm)">
+        <!-- Title -->
+        <div class="form-group mt-5">
+            <label for="titleInput">Title</label>
+            <input mdbInput type="text" class="form-control" id="titleInput" formControlName="title">
+        </div>
+        <!-- Short Desc -->
+        <div class="form-group mt-5">
+            <label for="shortDescInput">Short Description</label>
+            <input mdbInput type="text" class="form-control" id="shortDescInput" formControlName="shortDesc">
+        </div>
+        <!-- Long Desc -->
+        <div class="form-group mt-5">
+            <label for="longDescInput">Long Description</label>
+            <textarea class="form-control" id="longDescInput" formControlName="desc" rows="10"></textarea>
+        </div>
+        <!-- Trans -->
+        <div class="form-group mt-5">
+            <label for="transInput">Translations</label>
+            <textarea class="form-control" id="transInput" formControlName="trans" rows="10"></textarea>
+        </div>
+        
+        <div class="container">
+            <div class="row" *ngFor="let image of images; let i = index">
+              <div class="col-md-4">
+                    <!-- Imgs -->
+                    <div class="form-group mt-5">
+                        <label [for]="'imgLink'+(i+1)">Image {{i+1}}</label>
+                        <input mdbInput type="text" class="form-control" [id]="'imgLink'+(i+1)" [formControlName]="'imgLink'+(i+1)">
+                    </div>
+              </div>
+              <div class="col-md-8" style="padding: 4vmin;">
+                  <img src="./../../assets/grayloading.jpg" [id]="'img'+(i+1)" alt="Link not ok" style="max-width: 100%; max-height: 300px;">
+              </div>
+            </div>
+        </div>
+
+        <button type="submit" outline="true" mdbBtn color="elegant" mdbWavesEffect>Update Database</button>
+
+    </form>
+
+</div>

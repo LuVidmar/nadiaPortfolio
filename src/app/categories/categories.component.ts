@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ActivatedRoute, Router, RoutesRecognized } from '@angular/router';
-import { Observable } from 'rxjs';
-import { activity, year } from './../data-types';
+import { year } from './../data-types';
 
 @Component({
   selector: 'app-categories',

@@ -15,6 +15,8 @@ import { HomeModule } from './home/home.module';
 import { CategoriesComponent } from './categories/categories.component';
 import { FileComponent } from './file/file.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AdminComponent } from './admin/admin.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     Notfound404Component,
     NavbarComponent,
     CategoriesComponent,
-    FileComponent
+    FileComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     HomeModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

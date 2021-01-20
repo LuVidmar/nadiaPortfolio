@@ -4,12 +4,14 @@ export class activity {
     title: string;
     desc: string;
     shortDesc: string
-    imgLink: string;
-    public constructor (title_: string, desc_: string, shortDesc_: string, imgLink_: string){
+    imgLink: string[];
+    trans: string;
+    public constructor (title_: string, desc_: string, shortDesc_: string, imgLink_: string[], trans_: string){
         this.title = title_;
         this.desc = desc_;
         this.imgLink = imgLink_;
         this.shortDesc = shortDesc_;
+        this.trans = trans_;
     }
 }
 
