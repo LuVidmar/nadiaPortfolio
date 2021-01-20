@@ -11,6 +11,7 @@ import { activity, year } from './../data-types';
 })
 export class CategoriesComponent implements OnInit {
 
+  code: string;
   placeHolderData = [1,2,3,4];
   loading = true;
   title = 'Placeholder'
@@ -18,18 +19,20 @@ export class CategoriesComponent implements OnInit {
   years: number[];
 
   public constructor(private route:ActivatedRoute, private router: Router, firestore: AngularFirestore) {
-    var code = route.snapshot.data['category'];
-    this.updateTitle(code);
+    this.code = route.snapshot.data['category'];
+    this.updateTitle(this.code);
     
-    var yearList = firestore.collection('nadia').doc(code).valueChanges();
+    var yearList = firestore.collection('nadia').doc(this.code).valueChanges();
     yearList.subscribe(data => {
       this.yearData = [];
       this.years = data['years'];
 
+      //Each year
       this.years.forEach(y => {
-        var actData = firestore.collection('nadia').doc(code).collection(y.toString()).valueChanges();   
+        var actData = firestore.collection('nadia').doc(this.code).collection(y.toString()).valueChanges({ idField: 'docId' });   
         
-        var newYear = new year(y,actData);
+        //All activities and year number
+        var newYear = new year(y,actData);  
         
         this.yearData.push(newYear);        
       });
@@ -62,6 +65,11 @@ export class CategoriesComponent implements OnInit {
         break;
     }
     
+  }
+
+  generateUrl(year: string, category: string, id: string){
+    var url = '../file/' + year + '/' + category + '/' + id;
+    return url;
   }
 
 }
