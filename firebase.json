@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target": "nadia",
     "public": "dist/nadiaPortfolio",
     "ignore": [
       "firebase.json",

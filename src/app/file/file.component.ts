@@ -22,7 +22,7 @@ export class FileComponent implements OnInit {
     this.route.params.subscribe( params => {
       this.setCat(params.cat);
       
-      var fileLoc: string = 'gs://lvwebportfolio.appspot.com/Nadia/' + params.cat + '/' + params.year + '/' + 'Constancia CUIL.pdf';
+      var fileLoc: string = 'gs://lvwebportfolio.appspot.com/Nadia/' + params.cat + '/' + params.year + '/' + 'file.pdf';
       var ref = storage.refFromURL(fileLoc).getDownloadURL();
       ref.subscribe(d=>{
         console.log(d);
