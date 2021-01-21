@@ -3,7 +3,9 @@
     --dark-brown: #683B2B;
     --dark-pink: #D49D8E;
     --salmon: #DED1BD;
+    --salmon-rgb: 222, 209, 189;
     --white: #FAF6F2;
+    --white-rgb: 250,246, 242;
     --golden: palegoldenrod;
     --black: #212529;
 
@@ -15,9 +17,11 @@
         transition: ease-in-out 0.5s all;
     }
 
-    .highlightEffectYellow:hover{
-        background-size: 100% 100%;
-    }
+    @media (hover: hover) {
+        .highlightEffectYellow:hover{
+            background-size: 100% 100%;
+        }
+    }  
 
     .highlightEffectPink{
         background-image: linear-gradient(var(--salmon), var(--salmon));
@@ -27,8 +31,10 @@
         transition: ease-in-out 0.5s all;
     }
 
-    .highlightEffectPink:hover{
-        background-size: 100% 100%;
+    @media (hover: hover) {
+        .highlightEffectPink:hover{
+            background-size: 100% 100%;
+        }
     }
 
     .loading{

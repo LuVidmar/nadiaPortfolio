@@ -8,6 +8,8 @@ mdb-navbar-brand a{
     color: var(--black);
 }
 
-mdb-navbar-brand a:hover{
-    opacity: 0.5;
+@media (hover: hover) {
+    mdb-navbar-brand a:hover{
+        opacity: 0.5;
+    }
 }
