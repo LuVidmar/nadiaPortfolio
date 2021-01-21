@@ -12,8 +12,8 @@
                 <mdb-card class="card">
                     <div class="view overlay waves-light" mdbWavesEffect>
                         <!-- Card img -->
-                        <mdb-card-img src="{{activity.imgLink[0]}}" alt="Card image cap">
-                        </mdb-card-img>
+                        <mdb-card-img *ngIf="activity.imgLink[0]!=''" src="{{activity.imgLink[0]}}" alt="{{activity.title +' image}}"></mdb-card-img>
+                        <mdb-card-img *ngIf="activity.imgLink[0]==''" src="./../../assets/grayloading.jpg" alt="Didnt Load"></mdb-card-img>
                         <a>
                             <div class="mask rgba-white-slight"></div>
                         </a>
