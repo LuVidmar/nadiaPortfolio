@@ -5,14 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig : {
-    apiKey: "AIzaSyAfLLtMB8S6bPYL7sb-YIwaiqWaTCw7IEM",
-    authDomain: "lvwebportfolio.firebaseapp.com",
-    databaseURL: "https://lvwebportfolio.firebaseio.com",
-    projectId: "lvwebportfolio",
-    storageBucket: "lvwebportfolio.appspot.com",
-    messagingSenderId: "570494128621",
-    appId: "1:570494128621:web:fba5579414775c74b357e4",
-    measurementId: "G-REW6WDLV38"
+    apiKey: "AIzaSyBM3qRU_1F6Lf7y-tpWp7-AWwSFxtroYBo",
+    authDomain: "nadia-webportfolio.firebaseapp.com",
+    databaseURL: "https://nadia-webportfolio.firebaseio.com",
+    projectId: "nadia-webportfolio",
+    storageBucket: "nadia-webportfolio.appspot.com",
+    messagingSenderId: "466362952415",
+    appId: "1:466362952415:web:f499ee24f177dfc6be976a"
   }
 };
 

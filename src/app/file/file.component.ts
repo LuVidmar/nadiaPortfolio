@@ -22,14 +22,14 @@ export class FileComponent implements OnInit {
     this.route.params.subscribe( params => {
       this.setCat(params.cat);
       
-      var fileLoc: string = 'gs://lvwebportfolio.appspot.com/Nadia/' + params.cat + '/' + params.year + '/' + 'file.pdf';
+      var fileLoc: string = 'gs://nadia-webportfolio.appspot.com/' + params.cat + '/' + params.year + '/' + 'file.pdf';
       var ref = storage.refFromURL(fileLoc).getDownloadURL();
       ref.subscribe(d=>{
         console.log(d);
         this.downloadUrl=d;
       });
       
-      this.doc = firestore.collection('nadia').doc(params.cat).collection(params.year).doc<activity>(params.id).valueChanges();
+      this.doc = firestore.collection('activities').doc(params.cat).collection(params.year).doc<activity>(params.id).valueChanges();
       this.loaded = true;
       
     });

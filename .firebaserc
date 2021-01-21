@@ -1,6 +1,6 @@
 {
   "targets": {
-    "lvwebportfolio": {
+    "nadia-webportfolio": {
       "hosting": {
         "nadia": [
           "nadiavidmar"
@@ -9,7 +9,6 @@
     }
   },
   "projects": {
-    "nadia": "lvwebportfolio",
-    "default": "lvwebportfolio"
+    "default": "nadia-webportfolio"
   }
 }

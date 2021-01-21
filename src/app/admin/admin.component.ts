@@ -30,10 +30,10 @@ export class AdminComponent implements OnInit {
     });
     this.route.params.subscribe( params => {
 
-      firestore.collection('nadia').doc(params.cat).collection(params.year).doc<activity>(params.id).get().subscribe(d=>{
+      firestore.collection('activities').doc(params.cat).collection(params.year).doc<activity>(params.id).get().subscribe(d=>{
        
         if(d.exists){
-          firestore.collection('nadia').doc(params.cat).collection(params.year).doc<activity>(params.id).valueChanges().subscribe(dat=>{
+          firestore.collection('activities').doc(params.cat).collection(params.year).doc<activity>(params.id).valueChanges().subscribe(dat=>{
             this.loadData(dat);
           });
           this.exists = true;
@@ -52,7 +52,7 @@ export class AdminComponent implements OnInit {
     // Check Document existance
     if(this.exists){
       this.route.params.subscribe( params => {
-        this.firestore.collection('nadia').doc(params.cat).collection(params.year).doc<activity>(params.id).update({
+        this.firestore.collection('activities').doc(params.cat).collection(params.year).doc<activity>(params.id).update({
           title:  form.value.title,
           desc: form.value.desc,
           shortDesc: form.value.shortDesc,
@@ -65,7 +65,7 @@ export class AdminComponent implements OnInit {
     //Otherwise create
     else{
       this.route.params.subscribe( params => {
-        this.firestore.collection('nadia').doc(params.cat).collection(params.year).doc<activity>(params.id).set({
+        this.firestore.collection('activities').doc(params.cat).collection(params.year).doc<activity>(params.id).set({
           title:  form.value.title,
           desc: form.value.desc,
           shortDesc: form.value.shortDesc,

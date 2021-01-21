@@ -21,14 +21,14 @@ export class CategoriesComponent implements OnInit {
     this.code = route.snapshot.data['category'];
     this.updateTitle(this.code);
     
-    var yearList = firestore.collection('nadia').doc(this.code).valueChanges();
+    var yearList = firestore.collection('activities').doc(this.code).valueChanges();
     yearList.subscribe(data => {
       this.yearData = [];
       this.years = data['years'];
 
       //Each year
       this.years.forEach(y => {
-        var actData = firestore.collection('nadia').doc(this.code).collection(y.toString()).valueChanges({ idField: 'docId' });   
+        var actData = firestore.collection('activities').doc(this.code).collection(y.toString()).valueChanges({ idField: 'docId' });   
         
         //All activities and year number
         var newYear = new year(y,actData);  
