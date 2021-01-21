@@ -1,6 +1,7 @@
 <div *ngIf="loaded" id="bckgCont">
     <div class="hdr">
-        <img src="{{(doc | async)?.imgLink[0]}}" alt="Header Image">
+        <img *ngIf="(doc | async)?.imgLink[0]!='' " src="{{(doc | async)?.imgLink[0]}}" alt="Header Image">
+        <img *ngIf="(doc | async)?.imgLink[0]=='' " src="./../../assets/grayloading.jpg" alt="Header Image">
         <h1>{{(doc | async)?.title}}</h1>
     </div>
     <div id="category" [style.background-color]="catColor">
@@ -17,18 +18,20 @@
         </div>
     </div>
     <br>
-    <hr>
+    <hr *ngIf=" (((doc | async)?.trans)!='') || (((doc | async)?.desc) != '') ">
     <br>
     <div class="section">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h3>Description</h3>
+                    <h3 *ngIf="(doc | async)?.desc != ''">Description</h3>
                     <p>{{(doc | async)?.desc}}</p>
                 </div>
                 <div class="col-md-6">
-                    <h3 *ngIf="((doc | async)?.trans)!=''">Translation</h3>
-                    <p>{{(doc | async)?.trans}}</p>    
+                    <h3 *ngIf="((doc | async)?.trans)!=''">Document translation</h3>
+                    <p>{{(doc | async)?.trans}}</p>
+                    <br>
+                    <p *ngIf="((doc | async)?.trans)!=''" class="loading" style="background-color: var(--white);">You can download the original version below.</p>   
                 </div>
             </div>
         </div>
@@ -38,6 +41,55 @@
 
     <div class="section" *ngIf="downloadUrl!=''">
         <a [href]="downloadUrl" target="blank"><button type="button" outline="true" mdbBtn color="elegant" mdbWavesEffect>
+            <mdb-icon fas icon="file-download"></mdb-icon>
+            Download
+        </button></a>
+    </div>
+
+    <br><br><br>
+
+</div>
+
+<div *ngIf="!loaded" id="bckgCont">
+    <div class="hdr">
+        <img src="./../../assets/grayloading.jpg" alt="Header Image">
+        <h1 class="loading" style="color: silver;">Title</h1>
+    </div>
+    <div id="category" [style.background-color]="catColor" class="loading">
+        Category
+    </div>
+    <p id="shortDesc" class="loading">
+        Short Description
+    </p>
+    <div class="section">
+        <div class="flexContainer">
+            <div class="item" *ngFor="let i of [1,2,3,4,5]">
+                <img class="gal" src="./../../assets/grayloading.jpg" [alt]="'Image '+i">
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="loading">Description</h3>
+                    <p class="loading">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit cum delectus officiis nisi dolorum, perferendis ullam sint. Minus amet maiores voluptate accusamus dignissimos repellat iusto nam dicta, quidem facilis labore?</p>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="loading">Translation</h3>
+                    <p class="loading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quidem incidunt dolore nisi quos laborum modi, magni maiores fugiat ad doloremque dolores a inventore, quam similique! Numquam dolorum temporibus ut.</p>    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="section">
+        <a><button type="button" outline="true" mdbBtn color="elegant" mdbWavesEffect>
             <mdb-icon fas icon="file-download"></mdb-icon>
             Download
         </button></a>

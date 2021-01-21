@@ -27,12 +27,13 @@ h3{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .cardSpace{
-    max-width: 190pt;
+    max-width: 300pt;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     padding: 2vmin;
 }
-
