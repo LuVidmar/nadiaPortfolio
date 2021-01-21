@@ -15,12 +15,19 @@ export class FileComponent implements OnInit {
   catColor;
   loaded = false;
   category: string = 'Category';
-  docId: string;
   doc: Observable<activity>;
+  downloadUrl: string = '';
 
   constructor(private route: ActivatedRoute, private router: Router, firestore: AngularFirestore, private storage: AngularFireStorage) {
     this.route.params.subscribe( params => {
       this.setCat(params.cat);
+      
+      var fileLoc: string = 'gs://lvwebportfolio.appspot.com/Nadia/' + params.cat + '/' + params.year + '/' + 'Constancia CUIL.pdf';
+      var ref = storage.refFromURL(fileLoc).getDownloadURL();
+      ref.subscribe(d=>{
+        console.log(d);
+        this.downloadUrl=d;
+      });
       
       this.doc = firestore.collection('nadia').doc(params.cat).collection(params.year).doc<activity>(params.id).valueChanges();
       this.loaded = true;
