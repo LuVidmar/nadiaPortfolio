@@ -7,6 +7,12 @@
     <div id="category" [style.background-color]="catColor">
         {{category}}
     </div>
+    <div id="category">
+        {{year}}
+    </div>
+    <div *ngIf="(doc | async)?.emoji!='' " id="category">
+        {{(doc | async)?.emoji}}
+    </div>
     <p id="shortDesc">
         {{(doc | async)?.shortDesc}}
     </p>

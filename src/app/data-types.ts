@@ -6,12 +6,14 @@ export class activity {
     shortDesc: string
     imgLink: string[];
     trans: string;
-    public constructor (title_: string, desc_: string, shortDesc_: string, imgLink_: string[], trans_: string){
+    emoji: string;
+    public constructor (title_: string, desc_: string, shortDesc_: string, imgLink_: string[], trans_: string, emoji_: string){
         this.title = title_;
         this.desc = desc_;
         this.imgLink = imgLink_;
         this.shortDesc = shortDesc_;
         this.trans = trans_;
+        this.emoji = emoji_;
     }
 }
 

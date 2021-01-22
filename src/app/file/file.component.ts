@@ -20,9 +20,11 @@ export class FileComponent implements OnInit {
   doc: Observable<activity>;
   downloadUrl: string = '';
   modalRef: MDBModalRef;
+  year: string;
 
   constructor(private modalService: MDBModalService, private route: ActivatedRoute, private router: Router, firestore: AngularFirestore, private storage: AngularFireStorage) {
     this.route.params.subscribe( params => {
+      this.year = params.year;
       this.setCat(params.cat);
       
       var fileLoc: string = 'gs://nadia-webportfolio.appspot.com/' + params.cat + '/' + params.year + '/' + params.id + '/' + 'file.pdf';

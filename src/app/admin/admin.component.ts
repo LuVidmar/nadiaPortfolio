@@ -26,7 +26,8 @@ export class AdminComponent implements OnInit {
       imgLink2: [''],
       imgLink3: [''],
       imgLink4: [''],
-      imgLink5: ['']
+      imgLink5: [''],
+      emoji: ['']
     });
     this.route.params.subscribe( params => {
 
@@ -58,6 +59,7 @@ export class AdminComponent implements OnInit {
           shortDesc: form.value.shortDesc,
           trans: form.value.trans,
           imgLink: [form.value.imgLink1,form.value.imgLink2,form.value.imgLink3,form.value.imgLink4,form.value.imgLink5],
+          emoji: form.value.emoji,
         });
       });
 
@@ -71,6 +73,7 @@ export class AdminComponent implements OnInit {
           shortDesc: form.value.shortDesc,
           trans: form.value.trans,
           imgLink: [form.value.imgLink1,form.value.imgLink2,form.value.imgLink3,form.value.imgLink4,form.value.imgLink5],
+          emoji: form.value.emoji,
         });
       });
     }
@@ -82,6 +85,7 @@ export class AdminComponent implements OnInit {
     this.frm.get('desc').setValue(data.desc);
     this.frm.get('shortDesc').setValue(data.shortDesc);
     this.frm.get('trans').setValue(data.trans);
+    this.frm.get('emoji').setValue(data.emoji);
     
     for (var i = 0 ; data.imgLink.length > i ; i++){
       var s: string = 'imgLink'+(i+1);

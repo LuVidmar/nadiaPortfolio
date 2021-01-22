@@ -26,11 +26,13 @@
     border-radius: 10pt;
     padding-left: 5pt;
     padding-right: 5pt;
-    margin: 6vmin;
+    margin-top: 4vmin;
+    margin-left: 4vmin;
+    display: inline-block;
 }
 
 #shortDesc{
-    margin: 6vmin;
+    margin: 4vmin;
     border-left: 3px solid var(--black);
     padding-left: 2vmin;
 }
