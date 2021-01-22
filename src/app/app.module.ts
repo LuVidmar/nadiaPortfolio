@@ -18,6 +18,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AdminComponent } from './admin/admin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { PhotoVisualizerComponent } from './photo-visualizer/photo-visualizer.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     ReactiveFormsModule,
     AngularFireStorageModule
   ],
+  entryComponents: [ PhotoVisualizerComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })

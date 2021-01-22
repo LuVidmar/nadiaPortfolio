@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, DocumentData } from '@angular/fire/firestore';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
 import { Observable } from 'rxjs';
 import { activity } from '../data-types';
+import { PhotoVisualizerComponent } from '../photo-visualizer/photo-visualizer.component';
 
 @Component({
   selector: 'app-file',
@@ -17,8 +19,9 @@ export class FileComponent implements OnInit {
   category: string = 'Category';
   doc: Observable<activity>;
   downloadUrl: string = '';
+  modalRef: MDBModalRef;
 
-  constructor(private route: ActivatedRoute, private router: Router, firestore: AngularFirestore, private storage: AngularFireStorage) {
+  constructor(private modalService: MDBModalService, private route: ActivatedRoute, private router: Router, firestore: AngularFirestore, private storage: AngularFireStorage) {
     this.route.params.subscribe( params => {
       this.setCat(params.cat);
       
@@ -61,6 +64,25 @@ export class FileComponent implements OnInit {
         this.catColor = '#ffb3ba';
         break;
     }
+  }
+
+  modalOptions = {
+    backdrop: true,
+    keyboard: true,
+    focus: true,
+    show: false,
+    ignoreBackdropClick: false,
+    class: 'modal-fluid modal-full-height modal-dialog-centered',
+    containerClass: '',
+    animated: true,
+    data: {
+        imglink: './../../assets/grayloading.jpg'
+    }
+  }
+  
+  openModal(imgLink: any) {
+    this.modalOptions.data.imglink = imgLink;
+    this.modalRef = this.modalService.show(PhotoVisualizerComponent, this.modalOptions)
   }
 
   ngOnInit(): void {

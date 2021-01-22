@@ -13,7 +13,7 @@
     <div class="section">
         <div class="flexContainer">
             <div class="item" *ngFor="let ilink of ((doc | async)?.imgLink); let i = index">
-                <img *ngIf="(doc | async)?.imgLink[i]!='' " class="gal" src="{{ilink}}" [alt]="'Image '+(i+1)">
+                <img *ngIf="ilink!=''" class="gal" src="{{ilink}}" [alt]="'Image '+(i+1)" (click)="openModal(ilink)">
             </div>
         </div>
     </div>
